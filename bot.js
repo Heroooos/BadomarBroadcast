@@ -8,7 +8,7 @@ const Canvas = require('canvas');
 const data = {}
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`By : lg server.`);
+      console.log(`By : Alpha server.`);
         console.log(`---------------`);
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
@@ -135,6 +135,21 @@ client.on('message' , message => {
      
      
     });
+
+client.on('message', message => {
+    if (message.author.bot) return;
+     if (message.content === prefix + "help") {
+      if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
+     message.channel.send('**تم ارسال رسالة في الخاص**');
+
+
+
+
+ message.author.sendMessage(`
+ **
+[❖═════ Broadcast Commands ═══════❖]
+
++bc
 
 
 
