@@ -117,6 +117,7 @@ client.on('message' , message => {
       let args = message.content.split(" ").slice(1);
      
       if (command === "say") {
+	      if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
               message.delete()
         message.channel.sendMessage(args.join(" ")).catch(console.error);
       }
