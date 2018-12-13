@@ -5,6 +5,7 @@ const fs = require('fs');
 const moment = require('moment');
 const jimp = require('jimp');
 const Canvas = require('canvas');
+const prefix = "+"
 const data = {}
 client.on('ready', () => {
    console.log(`----------------`);
@@ -20,7 +21,6 @@ const RichEmbed = require("discord.js");
 
 client.on('message', message => {
   if(!message.channel.guild) return;
-var prefix = "+";
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
@@ -58,7 +58,6 @@ msg.delete();
 
 
 client.on('message' , message => {
-  var prefix = "+";
   if(message.author.bot) return;
  
   if(message.content.startsWith(prefix + "rolebc")) {
@@ -94,7 +93,6 @@ client.on('message' , message => {
     }
 });
                     client.on("message", message => {
-                         var prefix = "+";
                         if (message.content.startsWith(prefix + "obc")) {
                                      if (!message.member.hasPermission("ADMINISTRATOR"))  return;
               let args = message.content.split(" ").slice(1);
