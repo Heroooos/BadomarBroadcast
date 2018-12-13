@@ -149,7 +149,16 @@ client.on('message', message => {
  **
 [❖═════ Broadcast Commands ═══════❖]
 
-+bc
++bc عمل برودكاست للكل
+
++obc  عمل برودكاست لل offilne فقط
+
++rolebc عمل برودكاست لرتبة معينة
+
+ **`);
+
+    }
+});
 
 
 
